@@ -1,9 +1,13 @@
 let crsr = document.querySelector("#cursor");
+let crsrblr = document.querySelector("#cursor-blur");
 
 document.addEventListener("mousemove",function(dets){
     crsr.style.left = dets.x+"px";
     crsr.style.top = dets.y+"px";
+    crsrblr.style.left = dets.x-185+"px";
+    crsrblr.style.top = dets.y-185+"px";
 })
+
 
 gsap.to(".nav",{
     backgroundColor:"#000",

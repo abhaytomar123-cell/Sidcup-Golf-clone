@@ -20,7 +20,7 @@ html,body{
     padding: 0px 150px;
     gap:40px;
     position: fixed;
-    z-index: 10;
+    z-index: 11;
     
 
 }
@@ -36,6 +36,16 @@ html,body{
     position: fixed;
     background-color: #95C11E;
     z-index: 100;
+}
+
+#cursor-blur{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #bbff0055;
+    filter: blur(70px);
+    z-index: 8;
 }
 
 .nav h4{
@@ -67,6 +77,7 @@ video{
     align-items: center;
     justify-content: center;
     text-align: center;
+    z-index: 10
 }
 
 #page1 h1{
@@ -98,4 +109,98 @@ video{
 #page2{
     width: 100%;
     height: 100vh;
+    z-index: 10;
+}
+
+#scroller{
+    white-space: nowrap;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4{
+    display: inline-block;
+    font-size: 90px;
+    font-weight: 800;
+    margin-right: 10px;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    text-transform: uppercase;
+    color: black;
+    transition: all linear 0.3s;
+}
+
+#scroller h4:hover{
+    color:#95C11E;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+#about-us{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    align-items: center;
+    padding: 100px;
+    gap: 100px;
+
+}
+
+#us-1{
+    height: 150px;
+    width: 170px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#us-2{
+    height: 200px;
+    width: 140px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#about-us-in{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+#about-us-in h3{
+    font-size: 30px;
+    font-weight: 2000;
+}
+
+#about-us-in p{
+    font-size: 18px;
+    text-align: center;
+    line-height: 2;
+}
+
+#last-line{
+    margin-top: 10px;
 }
