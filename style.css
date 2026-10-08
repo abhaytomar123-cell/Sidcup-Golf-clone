@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.nav{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 150px;
+    gap:40px;
+    position: fixed;
+    z-index: 10;
+    
+
+}
+
+.nav img{
+    height: 70px;
+}
+
+#cursor{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #95C11E;
+    z-index: 100;
+}
+
+.nav h4{
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+#page1{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#page1 h1{
+    font-size: 100px;
+    font-weight: 1000;
+    position: relative;
+}
+
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 1px #95C11E;
+    z-index:-1 ;
+}
+
+#page h2{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#page1 p{
+    width: 40%;
+}
+
+#page2{
+    width: 100%;
+    height: 100vh;
+}
